@@ -1,5 +1,7 @@
 # New features in Java
 Going over some useful new features in Java without using any 3d party libraries...
+Be aware we listed these features under the JDK version they first appeared in as a preview,
+but there might be some deviation from this rule.
 
 ## JDK 9
 [Release notes](https://www.oracle.com/java/technologies/javase/9all-relnotes.html)  
@@ -43,4 +45,4 @@ Going over some useful new features in Java without using any 3d party libraries
 
 ## JDK 15
 [Release notes](https://www.oracle.com/java/technologies/javase/15-relnote-issues.html)  
-
+- Sealed Classes
