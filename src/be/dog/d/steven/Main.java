@@ -1,6 +1,7 @@
 package be.dog.d.steven;
 
 import be.dog.d.steven.placeholders.FooClass;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -121,7 +122,7 @@ public class Main {
 
         /** LAMBDAS WITH ANNOTATIONS **/
 
-        Consumer<BigDecimal> moneyConsumer = (@Deprecated var money) -> System.out.printf("I have %.2f $\n", money);
+        Consumer<BigDecimal> moneyConsumer = (@NotNull var money) -> System.out.printf("I have %.2f $\n", money);
 
 
         /** HTTP CLIENT **/
@@ -285,7 +286,18 @@ public class Main {
 
 
         /** Java 15 **/
+    }
+    /** SEALED CLASSES **/
+    sealed interface Command permits LoginCommand, LogoutCommand{
+        //...
 
+    }
+
+    public final class LoginCommand implements Command{
+
+    }
+
+    public final class LogoutCommand implements Command{
 
     }
 }
